@@ -5,7 +5,7 @@ import subprocess
 import sys
 import os
 
-def run_single_simulation(vy_value, constants_file='constants.txt', simulation_script='./SPsimulation.py'):
+def run_single_simulation(vy_value, constants_file='constants.txt', simulation_script='SPsimulation.py'):
     """
     Runs the simulation script SPsimulation.py for a given V_y
     and returns the calculated energy loss.
@@ -74,13 +74,13 @@ def run_single_simulation(vy_value, constants_file='constants.txt', simulation_s
 
 def main():
     # --- Configuration ---
-    simulation_script_name = './SPsimulation.py'
-    constants_file_name = './constants.txt'
+    simulation_script_name = 'SPsimulation.py'
+    constants_file_name = 'constants.txt'
 
     # Define the range and number of V_y values to test (negative for downward velocity)
     vy_start = -5000.0   # m/s
     vy_end = -20000.0  # m/s
-    num_points = 1500      # Number of simulation runs
+    num_points = 150      # Number of simulation runs
 
     # Generate the V_y values using numpy's linspace
     vy_values_to_test = np.linspace(vy_start, vy_end, num_points)
